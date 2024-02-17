@@ -896,3 +896,52 @@ footer .help-center {
     background: #000;
     transition: .5s;
 }
+
+/* Login Page */
+.form-side {
+    height: 80vh;
+}
+
+.form-field {
+    border: 1px solid #000;
+    width: 50rem;
+    padding: 2.4rem;
+    transform: translate(100%, 50%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+form h1 {
+    font-size: 2.4rem;
+    color: #000;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+form input {
+    padding: 0.6rem;
+    font-size: 1.6rem;
+}
+
+form #sub-btn {
+    background-color: #ef3232;
+    color: #fff;
+}
+
+form #sub-btn:hover {
+    background: #000;
+    cursor: pointer;
+}
+
+form p {
+    font-size: 1.6rem;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.774)
+}
