@@ -296,20 +296,21 @@ nav a:active{
     grid-column: 1 / 3;
     padding-left: 10rem;
     padding-top: 8rem;
-    background-color: #efefef;
+    /* background-color: #efefef; */
+    background-color: #e2e2e2;
 }
 
 .el--4 img {
     max-width: 25rem;
-    left: 38rem;
-    bottom: -4rem;
+    left: 42rem;
+    bottom: 0;
 }
 
-.el--4 h3, .el--4 h2 {
+.box2 .el--4 h3, .box2 .el--4 h2 {
     color: #000;
 }
 
-.el--4 h1 {
+.box2 .el--4 h1 {
     font-size: 5.2rem;
     color: #fff;
 }
@@ -333,6 +334,7 @@ nav a:active{
 }
 
 .el--5 #btn2:link, .el--5 #btn2:visited {
+    background-color: #fff;
     color: #32c969;
 }
 
@@ -350,6 +352,7 @@ nav a:active{
 }
 
 .el--6 #btn2:link, .el--6 #btn2:visited {
+    background-color: #fff;
     color: #098be8;
 }
 
@@ -380,7 +383,7 @@ nav a:active{
 }
 
 #btn2:link, #btn2:visited {
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: 0.8rem 3.2rem;
     font-size: 1.6rem;
     font-weight: lighter;
