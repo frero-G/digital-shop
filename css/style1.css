@@ -169,7 +169,7 @@ nav a:active{
 .desc-data {
     max-width: 30rem;
     text-align: right;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .desc-data h4 {
@@ -179,7 +179,9 @@ nav a:active{
 }
 
 .desc-data p {
-    color: #888;
+    font-size: 1.5rem;
+    color: #333333ca;
+    text-align: right;
     line-height: 1.6;
 }
 
@@ -569,7 +571,7 @@ nav a:active{
 }
 
 .element img {
-    max-width: 32rem;
+    max-width: 30rem;
     border-radius: 2.4rem;
 }
 
@@ -626,7 +628,7 @@ nav a:active{
 
 .container2 {
     /* background: #000; */
-    max-width: 150rem;
+    max-width: 180rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4.8rem;
@@ -668,6 +670,7 @@ nav a:active{
 
 .deep-details a {
     text-decoration: none;
+    color: #000;
 }
 
 .deep-details span {
@@ -684,6 +687,7 @@ nav a:active{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 9.6rem;
 }
 
 .logos img {
@@ -756,7 +760,8 @@ footer {
     max-width: 140rem;
     display: grid;
     grid-template-columns: 300px 300px 300px 1fr;
-    margin: 9.6rem 4.2rem;
+    margin: 0 4.2rem;
+    margin-bottom: 1.2rem;
 }
 
 footer .intro {
