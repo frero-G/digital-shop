@@ -874,3 +874,25 @@ footer .help-center {
     font-size: 1.4rem;
     color: #fff;
 }
+
+/* Account Page */
+.btns {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.btns a:link, .btns a:visited {
+    background-color: #ef3232;
+    padding: 14px 24px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btns a:hover, .btns a:active {
+    background: #000;
+    transition: .5s;
+}
