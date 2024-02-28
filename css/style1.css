@@ -49,7 +49,7 @@ body{
     gap: 3.6rem;
 }
 
-nav a:link, a:visited{
+nav a:link, nav a:visited{
     color: #888;
     text-decoration: none;
     font-size: 1.6rem;
@@ -73,7 +73,7 @@ nav a:active{
     padding: 10px;
 }
 
-.user a:link, a:visited{
+.user a:link, .user a:visited{
     font-size: 1.6rem;
     color: #111;
     text-decoration: none;
@@ -809,11 +809,15 @@ footer .links h2, footer .address h2 {
     gap: 1.2rem;
 }
 
-.main-links a:link , a:visited {
+.main-links a:link , .main-links a:visited {
     font-size: 1.8rem;
     font-weight: 400;
     color: #000;
     text-decoration: none;
+}
+
+.main-links a:hover , .main-links a:active {
+    color: #cc0404;
 }
 
 footer .list-addresses {
