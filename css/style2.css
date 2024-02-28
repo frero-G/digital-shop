@@ -1,0 +1,754 @@
+/* 
+--- 01 TYPOGRAPH SYSTEM
+
+ - Font sizes (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+  -Font weights: 400
+
+  -Line heights: 
+  Default:1
+
+  
+--- 02 Colors
+ - Primary: red
+ - Tints: 
+ - Shades:
+ - Accents:
+ - Greys:
+ #555
+
+--- 05 SHADOWS
+
+--- 06 BORDER RADIUS
+
+--- 07 WHITESPACE
+ - SPACING SYSTEM (px)
+ 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'poppins',sans-serif;
+    /* margin: 0 30px; */
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
+/* Header Part */
+.content {
+    margin: 0 30px;
+}
+
+.head-side{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0.8rem;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.head h1{
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    color: red;
+}
+
+.head nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.6rem;
+}
+
+nav a:link, nav a:visited{
+    color: #888;
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+nav a:active{
+    color: #333;
+}
+
+#active-tab{
+    color: #111;
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 10px;
+}
+
+.user a:link, .user a:visited{
+    font-size: 1.6rem;
+    color: #111;
+    text-decoration: none;
+    margin-right: 1.2rem;
+}
+
+.user a:visited {
+    color: #666;
+}
+
+.user img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.user #search{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.user .cart{
+    position: relative;
+}
+
+.user .cart span{
+    position: absolute;
+    left: 1.2rem;
+    background-color: red;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 0.4rem;
+    color: #fff;
+}
+
+/* guiding */
+.guiding {
+    background-color: #cacacab3;
+    padding: 6.2rem;
+    margin-bottom: 8rem;
+    text-align: center;
+    color: #111;
+}
+
+.guiding div {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #666;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+}
+
+.guiding h1 {
+    font-size: 3.6rem;
+}
+
+.guiding a:link, .guiding a:visited {
+    color: #666;
+    text-decoration: none;
+    margin-right: 0.6rem;
+}
+
+.guiding a:active, .guiding a:hover {
+    color: rgb(10, 147, 201);
+    text-decoration: underline;
+}
+
+.guiding span {
+    margin-left: 0.6rem;
+}
+
+/* middle part */
+.middle-side {
+    margin: 0 30px;
+    margin-bottom: 9.6rem;
+}
+
+/* shop page */
+.shop {
+    max-width: 180rem;
+    display: grid;
+    grid-template-columns: 40rem 1fr;
+    gap: 1.2rem;
+}
+
+.nav-bar {
+    padding: 1rem;
+}
+
+#type-space {
+    background-color: #e1e1e1;
+    max-width: 32rem;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1.4rem;
+    margin-bottom: 5.2rem;
+    border-radius: 4.8rem;
+}
+
+#type-space input {
+    width: 90%;
+    border: none;
+    background-color: #e1e1e1;
+    padding: 0.8rem;
+}
+
+#type-space input::placeholder {
+    font-size: 1.8rem;
+    color: #888;
+}
+
+#type-space div{
+    background: red;
+    padding: 1.4rem;
+    border-radius: 2.4rem;
+    margin-left: 1.2rem;
+}
+
+#type-space div img {
+    width: 1.8rem;
+}
+
+.option-head {
+    width: 32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.2rem;
+}
+
+.option-head h1 {
+    font-size: 2.2rem;
+}
+
+.option-head span {
+    font-size: 2.8rem;
+    font-weight: lighter;
+}
+
+.options {
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding-left: 3.2rem;
+}
+
+.options a:link, .options a:visited {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    color: #888;
+    text-decoration: none;
+}
+
+.products {
+    margin-bottom: 8rem;
+}
+
+.products .intro {
+    display: flex;
+    justify-content: space-between;
+    color: #111;
+    margin-bottom: 4.8rem;
+}
+
+.products .intro h1 {
+    font-size: 4rem;
+    letter-spacing: -3px;
+    margin-bottom: 1.2rem;
+}
+
+.products .intro p {
+    font-size: 1.8rem;
+    font-weight: lighter;
+}
+
+.con {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 4.2rem;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+}
+
+.element img {
+    max-width: 32rem;
+    border-radius: 2.4rem;
+    margin-bottom: 1.2rem;
+}
+
+#name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #111;
+    letter-spacing: -1px;
+}
+
+/* #name:hover {
+    font-weight: bold;
+    color: red;
+} */
+
+.product-details {
+    /* background: #000; */
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+#price {
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: #000;
+}
+
+#addCart {
+    background-color: red;
+    /* width: 16rem; */
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    font-family: sans-serif;
+    color: #fffffff1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 2.4rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* aboutUs page */
+.about {
+    max-width: 180rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 4.8rem 0;
+}
+
+.about .description {
+    width: 55rem;
+}
+
+.about .description h3 {
+    font-size: 1.6rem;
+    color: rgba(255, 0, 0, 0.704);
+    text-transform: capitalize;
+    margin-bottom: 2.4rem;
+}
+
+.about .description h1 {
+    font-size: 5.2rem;
+    color: #111;
+    text-transform: capitalize;
+    margin-bottom: 4.8rem;
+}
+
+.about .description p {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    font-family: sans-serif;
+    color: #888;
+    line-height: 2.8rem;
+    margin-bottom: 2.4rem;
+}
+
+.btn {
+    margin-top: 7.4rem;
+}
+
+.btn a:link, .btn a:visited {
+    background-color: rgba(255, 0, 0, 0.774);
+    padding: 2rem 6rem;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #fffffff7;
+    text-decoration: none;
+    border-radius: 4.8rem;
+}
+
+.btn a:hover, .btn a:active {
+    background-color: #000;
+    transition: .3s;
+}
+
+.about img {
+    width: 65rem;
+    border-radius: 2.4rem;
+    box-shadow: 0 0 20px 2px #8888886c;
+}
+
+/* Blog page */
+.blog {
+    max-width: 180rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 9.8rem;
+}
+
+.blog div {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.blog div img{
+    max-width: 38rem;
+    border-radius: 2.4rem;
+}
+
+.blog div span {
+    font-size: 1.8rem;
+    color: #555;
+}
+
+.blog div h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #000;
+    letter-spacing: -1px;
+}
+
+.blog div p {
+    width: 37rem;
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 2.4rem;
+}
+
+/* Contact page */
+.contact {
+    margin-bottom: 8.6rem;
+}
+
+.contact div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact div div {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.contact img {
+    border-radius: 2.4rem;
+}
+
+.contact div h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(255, 0, 0, 0.805);
+}
+
+.contact div h1 {
+    font-size: 3.6rem;
+    color: #111;
+    letter-spacing: -2px;
+}
+
+.contact div p {
+    width: 40rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+.contact div form {
+    width: 55rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact div form input, .contact div form textarea {
+    padding: 1.8rem 3.2rem;
+    background-color: #33333313;
+    border: none;
+    border-radius: 3.2rem;
+}
+
+.contact div form input::placeholder, .contact div form textarea::placeholder {
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-weight: lighter;
+    color: #33333381;
+}
+
+.contact div form input:last-child {
+    width: 35%;
+    background-color: rgba(255, 0, 0, 0.809);
+    font-size: 1.8rem;
+    color: #fff;
+    margin-left: 50%;
+    padding: 1.4rem 2.8rem;
+}
+
+.addresses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: end;
+    padding: 3.2rem;
+}
+
+.addresses div {
+    display: flex;
+    gap: 3.2rem;
+}
+
+.addresses div div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.addresses div img {
+    max-width: 5.2rem;
+}
+
+.addresses div span {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+/* Logos */
+
+.logos {
+    width: 100%;
+    background-color: #cacacab3;
+    height: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos img {
+    max-width: 4.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.logo1, .logo2, .logo3, .logo4, .logo5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #999999bb;
+    text-transform: uppercase;
+    margin: 0 3.2rem;
+}
+
+.logo1 span {
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.logo1 span:last-child {
+    font-weight: lighter;
+    transform: scale(-1, -1);
+}
+
+.logo2 span:first-child {
+    font-size: 4.2rem;
+}
+
+.logo2 span:last-child {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.logo3 span {
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.logo3 span:last-child {
+    font-size: 1rem;
+    letter-spacing: 5px;
+}
+
+.logo4 span {
+    font-size: 2.2rem;
+    font-weight: lighter;
+    letter-spacing: 4px;
+}
+
+.logo5 span:first-child {
+    font-size: 5.2rem;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 4px;
+}
+
+.logo5 span:last-child {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    letter-spacing: 4px;
+}
+
+/* Footer */
+footer {
+    max-width: 140rem;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 1fr;
+    margin: 9.6rem 4.2rem;
+}
+
+footer .intro {
+    width: 28rem;
+}
+
+footer .intro h1 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #ef3232d1;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-bottom: 3.6rem;
+}
+
+footer .intro p {
+    font-size: 1.8rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: lighter;
+    color: #0000008c;
+    letter-spacing: 0.1px;
+    line-height: 2.8rem;
+    margin-bottom: 5.2rem;
+}
+
+.social-media img {
+    width: 1.8rem;
+    margin-right: 3.2rem;
+}
+
+footer .links h2, footer .address h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #000;
+    margin-bottom: 3.2rem;
+}
+
+.main-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.main-links a:link , .main-links a:visited {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+}
+
+.main-links a:hover , .main-links a:active {
+    color: #cc0404;
+}
+
+footer .list-addresses {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.list-addresses span {
+    font-size: 1.6rem;
+    font-family: Montserrat, sans-serif;
+    color: #333;
+}
+
+footer .help-center {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    font-family: Montserrat, sans-serif;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.help-center h2 {
+    font-size: 1.8rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+
+.help-center h3 {
+    font-size: 3.8rem;
+}
+
+.write-box {
+    background-color: transparent;
+    background-image: radial-gradient(#c9c9c952, #c3c2c234);
+    padding: 8px 32px;
+    padding-right: 12px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.write-box input {
+    border: none;
+    font-size: 1.8rem;
+    background-image: radial-gradient(#c9c9c952, #c3c2c234);
+}
+
+.write-box input:first-child {
+    width: 100%;
+}
+
+.write-box input:nth-child(2) {
+    background-color: rgba(255, 0, 0, 0.993);
+    padding: 14px 42px;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+/* Original footer */
+.original-footer {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    color: #ffffff95;
+    font-family: poppins, sans-serif;
+    font-weight: lighter;
+}
+
+.original-footer span {
+    font-size: 16px;
+}
+
+.original-footer a:link, .original-footer a:visited {
+    font-size: 1.6rem;
+    color: #666;
+    text-decoration: none;
+}
