@@ -36,3 +36,41 @@ try {
 } catch (e) {
     console.log('this error is for user-dashboard.html')
 }
+
+try {
+    document.querySelector('#add-product').addEventListener('click', (e) => {
+        location.assign(`new-product.html#${userId}`)
+    })
+} catch (e) {
+    console.log('this error is for the new product button.')
+}
+
+// Save New Product
+const product = getSavedProducts()
+const Id = location.hash.substring(1)
+
+const creator = datas.find((data) => data.id === Id)
+
+try {
+    let category
+    document.querySelector('#selected-item').addEventListener('change', (e) => {
+        category = ''
+        category = e.target.value
+    })
+    document.querySelector('.product-form').addEventListener('submit', (e) => {
+        const id = uuidv4()
+        product.push({
+            id: id,
+            name: e.target.elements.productName.value,
+            price: e.target.elements.productPrice.value,
+            category: category,
+            creater: creator.names
+        })
+        saveProduct(product)
+    })
+    
+    console.log(product)
+    
+} catch (e) {
+    console.log('this error is for new-product.html')
+}
