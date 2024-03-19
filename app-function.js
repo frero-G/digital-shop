@@ -9,3 +9,8 @@ const getSavedDatas = () => {
         return []
     }
 }
+
+// Save Datas
+const saveDatas = (datas) => {
+    localStorage.setItem('datas', JSON.stringify(datas))
+}
