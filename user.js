@@ -101,4 +101,4 @@ try {
     console.log('logout error.')
 }
 
-renderProducts()
+renderProducts(product)

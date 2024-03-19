@@ -127,3 +127,19 @@ const generateProductDOM = function (datas) {
 
     return emptyDiv
 }
+
+// saveCarts
+const saveCart = function (cart) {
+    localStorage.setItem('carts', JSON.stringify(cart))
+}
+
+// Get Saved Cart
+const getSavedCarts = function () {
+    const cartJSON = localStorage.getItem('carts')
+
+    if (cartJSON !== null) {
+        return JSON.parse(cartJSON)
+    } else {
+        return []
+    }
+}
