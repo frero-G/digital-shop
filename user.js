@@ -87,7 +87,11 @@ try {
 // Logout part
 try {
     document.querySelector('#logout-btn').addEventListener('click', (e) => {
-        data.login = false
+        if (data >= 0) {
+            data.login = false
+        } else {
+            location.assign('login.html')
+        }
     
         if (data.login === false) {
             location.assign('login.html')
