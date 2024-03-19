@@ -101,4 +101,23 @@ try {
     console.log('logout error.')
 }
 
-renderProducts(product)
+try {
+    renderProducts(product)
+
+    const priceSpan = document.querySelector('#price')
+    const buttonCart = document.querySelector('#addCart')
+    
+    document.querySelector('.product-details').addEventListener('mouseenter', (e) => {
+        priceSpan.style = 'display: none'
+        buttonCart.style = 'display: block'
+    })
+
+    document.querySelector('.product-details').addEventListener('mouseleave', (e) => {
+        buttonCart.style = 'display: none'
+        priceSpan.style = 'display: block'
+    })
+} catch (error) {
+    console.log('render products function error.')
+}
+
+console.log(datas)
