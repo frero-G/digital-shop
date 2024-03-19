@@ -2,7 +2,7 @@
 
 // Get Saved Datas
 const getSavedDatas = () => {
-    const datasJSON = localStorage.getItem('datas')
+    const datasJSON = localStorage.getItem('datas2')
     try {
         return datasJSON ? JSON.parse(datasJSON) : []
     } catch (g) {
@@ -12,7 +12,7 @@ const getSavedDatas = () => {
 
 // Save Datas
 const saveDatas = (datas) => {
-    localStorage.setItem('datas', JSON.stringify(datas))
+    localStorage.setItem('datas2', JSON.stringify(datas))
 }
 
 // Check Data
