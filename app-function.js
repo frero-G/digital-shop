@@ -14,3 +14,34 @@ const getSavedDatas = () => {
 const saveDatas = (datas) => {
     localStorage.setItem('datas', JSON.stringify(datas))
 }
+
+// Check Data
+const checkData = (datas, check) => {
+    const nameValidation = document.querySelector('#names')
+    const passwordValidation = document.querySelector('#password')
+
+    const index = datas.findIndex(function (data, index) {
+        const fullNameIndex = data.names.toLowerCase() === check.fullName.toLowerCase()
+
+        // fullName validation
+        nameValidation.textContent = ''
+        if (fullNameIndex < 1) {
+            nameValidation.textContent = 'incorrect names'
+        } else {
+            return fullNameIndex
+        }
+        
+    })
+    
+    console.log(index)
+    
+    // Password validation
+    passwordValidation.textContent = 'Enter password'
+    if (datas[index].password.toLowerCase() !== check.password.toLowerCase()) {
+        passwordValidation.textContent = 'Incorrect password'
+    } else {
+        // passwordValidation.textContent = 'Your data is valid, you welcome'
+        datas[index].login = true
+        location.assign(`user-dashboard.html#${datas[index].id}`)
+    }
+}
