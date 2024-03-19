@@ -15,6 +15,7 @@ body{
     font-weight: 400;
     color: #555;
     position: relative;
+    overflow-x: hidden;
 }
 
 /* Header Part */
@@ -799,11 +800,11 @@ nav a:hover, nav a:active{
     max-width: 150rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4.8rem;
+    gap: 2.4rem;
 }
 
 .element2 img {
-    max-width: 45rem;
+    max-width: 40rem;
     border-radius: 2.4rem;
     margin-bottom: 3.2rem;
 }
