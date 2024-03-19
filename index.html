@@ -21,11 +21,40 @@
             </div>
     
             <div class="user">
-                <a href="account.html">login</a>
+                <img src="icons/microsoft_store_512px.png" alt="Account" id="account-img">
+                <div class="account-info">
+                    <span id="username"></span>
+                    <!-- <a href="new-product.html" style="font-size: 24px;" id="add-product">+</a> -->
+                    <a style="font-size: 24px; cursor: pointer;" id="add-product">+</a>
+                    <button id="logout-btn">Logout</button>
+                </div>
                 <img src="icons/search_500px.png" alt="search" id="search">
                 <div class="cart">
-                    <a href="add-cart.html"><img src="icons/microsoft_store_512px.png" alt="cart"></a>
-                    <span>0</span>
+                    <img src="icons/microsoft_store_512px.png" alt="cart" id="cart-list">
+                    <span id="count">0</span>
+                    <div class="cart-box">
+                        <div class="content1">
+                            <div class="product">
+                                <img src="img/laptop.jpg" alt="cart img" id="prod-img">
+                                <div class="cart-details">
+                                    <div>
+                                        <span id="cart-name">Elite Laptop</span>
+                                        <span id="cart-price">1 * $8,250</span>
+                                    </div>
+                                    <img src="icons/close_48px.png" alt="close" id="close">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="content2">
+                            <div class="subtotal">
+                                <span>sub total</span>
+                                <span id="total">$16,500</span>
+                            </div>
+                            <a href="checkout.html" id="btn1">proceed to checkout</a>
+                            <a href="cart.html" id="btn2">view cart</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
