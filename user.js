@@ -83,3 +83,16 @@ try {
 } catch (e) {
     
 }
+
+// Logout part
+try {
+    document.querySelector('#logout-btn').addEventListener('click', (e) => {
+        data.login = false
+    
+        if (data.login === false) {
+            location.assign('login.html')
+        }
+    })
+} catch (error) {
+    console.log('logout error.')
+}
