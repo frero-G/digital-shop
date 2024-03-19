@@ -8,7 +8,7 @@ const check = {
     password: ''
 }
 
-document.querySelector('.login-field').addEventListener('submit', (e) => {
+document.querySelector('.form-field').addEventListener('submit', (e) => {
     e.preventDefault()
     check.fullName = e.target.elements.fullName.value
     check.password = e.target.elements.password.value
