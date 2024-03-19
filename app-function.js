@@ -48,12 +48,12 @@ const checkData = (datas, check) => {
 
 // saveProducts
 const saveProduct = function (product) {
-    localStorage.setItem('products', JSON.stringify(product))
+    localStorage.setItem('products2', JSON.stringify(product))
 }
 
 // Get Saved Products
 const getSavedProducts = function () {
-    const productsJSON = localStorage.getItem('products')
+    const productsJSON = localStorage.getItem('products2')
 
     if (productsJSON !== null) {
         return JSON.parse(productsJSON)

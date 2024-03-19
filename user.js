@@ -74,3 +74,12 @@ try {
 } catch (e) {
     console.log('this error is for new-product.html')
 }
+
+// Back btn
+try {
+    document.querySelector('#backBtn').addEventListener('click', (e) => {
+        location.assign(`user-dashboard.html#${userId}`)
+    })
+} catch (e) {
+    
+}
