@@ -45,3 +45,19 @@ const checkData = (datas, check) => {
         location.assign(`user-dashboard.html#${datas[index].id}`)
     }
 }
+
+// saveProducts
+const saveProduct = function (product) {
+    localStorage.setItem('products', JSON.stringify(product))
+}
+
+// Get Saved Products
+const getSavedProducts = function () {
+    const productsJSON = localStorage.getItem('products')
+
+    if (productsJSON !== null) {
+        return JSON.parse(productsJSON)
+    } else {
+        return []
+    }
+}
