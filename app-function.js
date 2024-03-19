@@ -61,3 +61,69 @@ const getSavedProducts = function () {
         return []
     }
 }
+
+// Render Products
+const renderProducts = (product) => {
+    product.forEach(function (info) {
+        const productEl = generateProductDOM(info)
+        document.querySelector('.con').appendChild(productEl)
+    })
+    console.log(product)
+}
+
+// generate product DOM
+const generateProductDOM = function (datas) {
+    const emptyDiv = document.createElement('div')
+    const productDetailsDiv = document.createElement('div')
+    const img = document.createElement('img')
+    const name = document.createElement('span')
+    const price = document.createElement('span')
+    const btn = document.createElement('a')
+    const creatorN = document.createElement('span')
+
+    img.setAttribute('src', 'img/group-33.jpg')
+    img.setAttribute('alt', 'product picture')
+    emptyDiv.appendChild(img)
+
+    // setup name span
+    name.setAttribute('id', 'name')
+    name.setAttribute('name', 'zz')
+    name.textContent = datas.name
+    emptyDiv.appendChild(name)
+
+    // setup price span
+    price.setAttribute('id', 'price')
+    price.textContent = `$${datas.price}`
+    productDetailsDiv.appendChild(price)
+
+    // setup AddCart button
+    btn.setAttribute('id', 'addCart')
+    btn.setAttribute('href', `cart.html#${datas.id}`)
+    btn.textContent = 'Add To Cart'
+    productDetailsDiv.appendChild(btn)
+
+    // setup creator name
+    if (!datas.creater) {
+        creatorN.textContent = 'unknown'
+    } else {
+        creatorN.textContent = datas.creater
+    }
+    productDetailsDiv.appendChild(creatorN)
+
+    // setup products details DIV
+    productDetailsDiv.setAttribute('class', 'product-details')
+    emptyDiv.setAttribute('class', 'element')
+    productDetailsDiv.addEventListener('mouseenter', (e) => {
+        price.style = 'display: none'
+        btn.style = 'display: block'
+    })
+
+    productDetailsDiv.addEventListener('mouseleave', (e) => {
+        btn.style = 'display: none'
+        price.style = 'display: block'
+    })
+
+    emptyDiv.appendChild(productDetailsDiv)
+
+    return emptyDiv
+}
