@@ -100,3 +100,5 @@ try {
 } catch (error) {
     console.log('logout error.')
 }
+
+renderProducts()
