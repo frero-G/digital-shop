@@ -15,7 +15,7 @@ try {
     console.log('count carts error')
 }
 
-// renderCarts(carts)
+renderCarts(carts)
 
 const productIndex = products.find((product) => product.id === prodId)
 
