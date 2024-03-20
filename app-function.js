@@ -270,3 +270,14 @@ const generateCartTableDOM = function (cart) {
 
     return tr
 }
+
+// remove Cart
+const removeCart = (cartId) => {
+    const cartIndex = carts.findIndex(function (cart) {
+        return cart.id === cartId
+    })
+
+    if (cartIndex > -1) {
+        carts.splice(cartIndex, 1)
+    }
+}
