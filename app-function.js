@@ -308,3 +308,18 @@ const changeQuantity = (cartId, newQuantity) => {
         carts[cartIndex].quantity = newQuantity
     }
 }
+
+// checkout Info
+const saveCheckout = function (info) {
+    localStorage.setItem('checkout', JSON.stringify(info))
+}
+
+const getCheckout = function () {
+    const checkoutJSON = localStorage.getItem('checkout')
+
+    if (checkoutJSON !== null) {
+        return JSON.parse(checkoutJSON)
+    } else {
+        return []
+    }
+}
