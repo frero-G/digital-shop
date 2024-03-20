@@ -1008,3 +1008,22 @@ table input {
     color: #fff;
     text-decoration: none;
 }
+
+/* checkout form */
+.checkout-form {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+.checkout-form label {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+}
+
+.checkout-form input {
+    padding: 1.6rem;
+}
