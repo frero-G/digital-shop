@@ -63,12 +63,36 @@
             </tbody>
             <tr id="updateRow">
                 <td id="updateData" colspan="6">
-                    <button>Update cart</button>
+                    <button id="updateBtn">Update cart</button>
                 </td>
             </tr>
         </table>
     
     </div>
+
+    <div class="payment">
+        <h2>Cart totals</h2>
+        <div class="info">
+            <div>
+                <label for="">Subtotal:</label>
+                <span id="total"></span>
+            </div>
+            <div>
+                <label for="">Shipping:</label>
+                <div class="flatRate">
+                    <span>Flat rate: $1,000</span>
+                    <span>Shipping to Rwanda</span>
+                    <a href="checkout.html">change address</a>
+                </div>
+            </div>
+            <div>
+                <label for="">Total:</label>
+                <span id="allTotal"></span>
+            </div>
+        </div>
+        <button><a href="checkout.html">Proceed to checkout</a></button>
+    </div>
+
     <footer>
         <div class="intro">
             <h1>Phlox</h1>
