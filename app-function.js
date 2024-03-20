@@ -281,3 +281,14 @@ const removeCart = (cartId) => {
         carts.splice(cartIndex, 1)
     }
 }
+
+// change Quantity
+const changeQuantity = (cartId, newQuantity) => {
+    const cartIndex = carts.findIndex(function (cart) {
+        return cart.id === cartId
+    })
+
+    if (cartIndex > -1) {
+        carts[cartIndex].quantity = newQuantity
+    }
+}
