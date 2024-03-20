@@ -217,6 +217,8 @@ const generateCartDOM = function (cart) {
     return productDiv
 }
 
+let newQuantity
+
 const generateCartTableDOM = function (cart) {
     // const tbody = document.querySelector('.cartStore')
     const tr = document.createElement('tr')
@@ -259,6 +261,20 @@ const generateCartTableDOM = function (cart) {
     quantityInput.setAttribute('id', 'newQuantity')
     quantityInput.setAttribute('value', cart.quantity)
     quantityInput.setAttribute('min', 1)
+    quantityInput.addEventListener('click', (e) => {
+        newQuantity = ''
+        newQuantity = e.target.value
+        changeQuantity(cart.id, newQuantity)
+    })
+
+    try {
+        document.querySelector('#updateBtn').addEventListener('click', (e) => {
+            saveCart(carts)
+            location.assign('cart.html')
+        })
+    } catch (error) {
+        console.error();
+    }
 
     td5.append(quantityInput)
     tr.appendChild(td5)
