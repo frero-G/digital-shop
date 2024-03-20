@@ -945,3 +945,66 @@ table input {
     color: #666;
     cursor: pointer;
 }
+
+/* cart Totals */
+.payment {
+    width: 50rem;margin-left: 60%;
+}
+
+.payment h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.2rem;
+}
+
+.payment .info div{
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    border: 1px solid #555;
+    font-weight: lighter;
+}
+
+.payment .info{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.payment .info label {
+    background: #00000009;
+    padding: 1.2rem;
+    font-weight: bold;
+}
+
+.payment .info .flatRate {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.payment .info .flatRate a {
+    font-weight: 300;
+    color: rgb(120, 204, 237);
+    text-decoration: none;
+    padding: 1.2rem;
+}
+
+.payment .info span {
+    padding: 1.2rem;
+}
+
+.payment button {
+    width: 100%;
+    padding: 1.2rem;
+    margin-top: 2.4rem;
+    font-size: 1.8rem;
+    background-color: rgba(128, 0, 128, 0.556);
+    border: none;
+    cursor: pointer;
+}
+
+.payment button a {
+    color: #fff;
+    text-decoration: none;
+}
