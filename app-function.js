@@ -130,16 +130,143 @@ const generateProductDOM = function (datas) {
 
 // saveCarts
 const saveCart = function (cart) {
-    localStorage.setItem('carts', JSON.stringify(cart))
+    localStorage.setItem('carts2', JSON.stringify(cart))
 }
 
 // Get Saved Cart
 const getSavedCarts = function () {
-    const cartJSON = localStorage.getItem('carts')
+    const cartJSON = localStorage.getItem('carts2')
 
     if (cartJSON !== null) {
         return JSON.parse(cartJSON)
     } else {
         return []
     }
+}
+
+// render Carts
+const renderCarts = (cart) => {
+    cart.forEach(function (Info) {
+        const cartEl = generateCartDOM(Info)
+        const tableEl = generateCartTableDOM(Info)
+        try {
+            document.querySelector('.content1').appendChild(cartEl)
+        } catch(error) {
+            console.error();
+        }
+
+        try {
+            document.querySelector('.cartStore').appendChild(tableEl)
+        } catch (error) {
+            console.error();
+        }
+    })
+
+    try {
+        if (cart.length >= 2) {
+        document.querySelector('.content1').style = 'height: 25rem; overflow-y: scroll;'
+        }
+    } catch (error) {
+        console.error();
+    }
+}
+
+// generate Cart DOM
+const generateCartDOM = function (cart) {
+    const productDiv = document.createElement('div')
+    const img = document.createElement('img')
+    const cartDetailsDiv = document.createElement('div')
+    const emptyDiv = document.createElement('div')
+    const cartName = document.createElement('span')
+    const cartPrice = document.createElement('span')
+    const closeBtn = document.createElement('img')
+
+    img.setAttribute('src', 'img/group-33.jpg')
+    img.setAttribute('alt', 'product picture')
+    img.setAttribute('id', 'prod-img')
+    productDiv.appendChild(img)
+
+    cartDetailsDiv.setAttribute('class', 'cart-details')
+    productDiv.appendChild(cartDetailsDiv)
+
+    cartDetailsDiv.appendChild(emptyDiv)
+
+    // setup Cart Name
+    cartName.setAttribute('id', 'cart-name')
+    cartName.textContent = cart.prodName
+    emptyDiv.appendChild(cartName)
+
+    // setup Cart Price
+    cartPrice.setAttribute('id', 'cart-price')
+    cartPrice.textContent = `${cart.quantity} * ${cart.prodPrice}`
+    emptyDiv.appendChild(cartPrice)
+
+    // setup Close Button
+    closeBtn.setAttribute('src', 'icons/close_48px.png')
+    closeBtn.setAttribute('alt', 'close')
+    closeBtn.setAttribute('id', 'close')
+    closeBtn.addEventListener('click', function (e) {
+        removeCart(cart.id)
+        saveCart(carts)
+        renderCarts(carts)
+    })
+    cartDetailsDiv.appendChild(closeBtn)
+
+    productDiv.setAttribute('class', 'product')
+
+    return productDiv
+}
+
+const generateCartTableDOM = function (cart) {
+    // const tbody = document.querySelector('.cartStore')
+    const tr = document.createElement('tr')
+    const td1 = document.createElement('td')
+    const td2 = document.createElement('td')
+    const td3 = document.createElement('td')
+    const td4 = document.createElement('td')
+    const td5 = document.createElement('td')
+    const td6 = document.createElement('td')
+    const imgClose = document.createElement('img')
+    const prodImg = document.createElement('img')
+    const quantityInput = document.createElement('input')
+
+    // setup img close
+    imgClose.setAttribute('src', 'icons/close_48px.png')
+    imgClose.setAttribute('alt', 'delete cart')
+    imgClose.setAttribute('id', 'tdClose')
+    imgClose.addEventListener('click', function (e) {
+        removeCart(cart.id)
+        saveCart(carts)
+        location.assign('cart.html')
+    })
+    td1.append(imgClose)
+    tr.appendChild(td1)
+
+    // setup img close
+    prodImg.setAttribute('src', 'img/group-33.jpg')
+    prodImg.setAttribute('alt', 'product picture')
+    td2.append(prodImg)
+    tr.appendChild(td2)
+
+    td3.textContent = cart.prodName
+    tr.appendChild(td3)
+
+    td4.textContent = `$${cart.prodPrice}`
+    tr.appendChild(td4)
+
+    // setup quantity input
+    quantityInput.setAttribute('type', 'number')
+    quantityInput.setAttribute('id', 'newQuantity')
+    quantityInput.setAttribute('value', cart.quantity)
+    quantityInput.setAttribute('min', 1)
+
+    td5.append(quantityInput)
+    tr.appendChild(td5)
+
+    td6.textContent = `$${cart.quantity*cart.prodPrice}`
+    tr.appendChild(td6)
+
+    // tbody.appendChild(tr)
+
+    return tr
 }
