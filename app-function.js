@@ -311,11 +311,11 @@ const changeQuantity = (cartId, newQuantity) => {
 
 // checkout Info
 const saveCheckout = function (info) {
-    localStorage.setItem('checkout', JSON.stringify(info))
+    localStorage.setItem('checkout2', JSON.stringify(info))
 }
 
 const getCheckout = function () {
-    const checkoutJSON = localStorage.getItem('checkout')
+    const checkoutJSON = localStorage.getItem('checkout2')
 
     if (checkoutJSON !== null) {
         return JSON.parse(checkoutJSON)
