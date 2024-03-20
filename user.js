@@ -121,3 +121,19 @@ try {
 }
 
 console.log(datas)
+
+// cart Box
+try {
+    const cartBox = document.querySelector('.cart-box')
+    const ImgCart = document.querySelector('#cart-list')
+
+    ImgCart.addEventListener('mouseenter', (e) => {
+        cartBox.style = 'display: block'
+    })
+
+    cartBox.addEventListener('mouseleave', (e) => {
+        cartBox.style = 'display: none'
+    })
+} catch (e) {
+    console.log('cart Box error.')
+}
