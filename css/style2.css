@@ -1027,3 +1027,8 @@ table input {
 .checkout-form input {
     padding: 1.6rem;
 }
+
+/* shop nav bar */
+#arrow1, #arrow2 {
+    cursor: pointer;
+}
