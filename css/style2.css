@@ -401,7 +401,7 @@ nav a:hover, nav a:active{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 4.2rem;
-    column-gap: 3.2rem;
+    column-gap: 2.4rem;
 }
 
 .element {
@@ -410,7 +410,7 @@ nav a:hover, nav a:active{
 }
 
 .element img {
-    max-width: 32rem;
+    max-width: 28rem;
     border-radius: 2.4rem;
     margin-bottom: 1.2rem;
 }
@@ -468,6 +468,7 @@ nav a:hover, nav a:active{
     max-width: 180rem;
     display: flex;
     justify-content: space-between;
+    gap: 1.2rem;
     padding: 4.8rem 0;
 }
 
@@ -602,7 +603,6 @@ nav a:hover, nav a:active{
 }
 
 .contact div form {
-    width: 55rem;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;

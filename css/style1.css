@@ -263,6 +263,41 @@ nav a:hover, nav a:active{
     color: #fff;
 }
 
+/* guiding */
+.guiding {
+    background-color: #cacacab3;
+    padding: 6.2rem;
+    text-align: center;
+    color: #111;
+}
+
+.guiding div {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #666;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+}
+
+.guiding h1 {
+    font-size: 3.6rem;
+}
+
+.guiding a:link, .guiding a:visited {
+    color: #666;
+    text-decoration: none;
+    margin-right: 0.6rem;
+}
+
+.guiding a:active, .guiding a:hover {
+    color: rgb(10, 147, 201);
+    text-decoration: underline;
+}
+
+.guiding span {
+    margin-left: 0.6rem;
+}
+
 /* Middle Side */
 .middle-side {
     margin: 0 3rem;
