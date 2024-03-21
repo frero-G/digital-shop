@@ -17,6 +17,19 @@ try {
 
 renderCarts(carts)
 
+let total = 0
+let subtotal
+const totals = carts.forEach((cart) => {
+    subtotal = cart.prodPrice * cart.quantity
+    total += subtotal
+    
+})
+console.log(total)
+document.querySelector('#total').textContent = ''
+document.querySelector('#total').textContent = `$${total}`
+
+document.querySelector('#allTotal').textContent = `$${total+1000}`
+
 const productIndex = products.find((product) => product.id === prodId)
 
 console.log(productIndex)
