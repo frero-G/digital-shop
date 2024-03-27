@@ -139,21 +139,25 @@ try {
 }
 
 // shop nav bar
-const Arrow1 = document.querySelector('#arrow1')
-const Arrow2 = document.querySelector('#arrow2')
-const optionBox = document.querySelector('.option-box')
-
-optionBox.style = 'display: none'
-Arrow1.style = 'display: none;'
-
-Arrow2.addEventListener('click', (e) => {
-    optionBox.style = 'display: block'
-    Arrow1.style = 'display: block'
-    Arrow2.style = 'display: none'
-})
-
-Arrow1.addEventListener('click', (e) => {
+try {  
+    const Arrow1 = document.querySelector('#arrow1')
+    const Arrow2 = document.querySelector('#arrow2')
+    const optionBox = document.querySelector('.option-box')
+    
     optionBox.style = 'display: none'
-    Arrow1.style = 'display: none'
-    Arrow2.style = 'display: block'
-})
+    Arrow1.style = 'display: none;'
+    
+    Arrow2.addEventListener('click', (e) => {
+        optionBox.style = 'display: block'
+        Arrow1.style = 'display: block'
+        Arrow2.style = 'display: none'
+    })
+    
+    Arrow1.addEventListener('click', (e) => {
+        optionBox.style = 'display: none'
+        Arrow1.style = 'display: none'
+        Arrow2.style = 'display: block'
+    })
+} catch (error) {
+    console.error();
+}

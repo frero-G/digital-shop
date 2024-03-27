@@ -169,6 +169,15 @@ const renderCarts = (cart) => {
     } catch (error) {
         console.error();
     }
+
+    try {
+        if (cart.length <= 0) {
+        document.querySelector('.box').style = 'display: none'
+        document.querySelector('.emppty-div').style = 'display: block'
+        }
+    } catch (error) {
+        console.error();
+    }
 }
 
 // generate Cart DOM

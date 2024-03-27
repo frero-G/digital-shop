@@ -263,6 +263,14 @@ nav a:hover, nav a:active{
     color: #fff;
 }
 
+/* empty div */
+.emppty-div {
+    height: 4vh;
+    text-align: center;
+    margin: 20% 0;
+    display: none;
+}
+
 /* guiding */
 .guiding {
     background-color: #cacacab3;
