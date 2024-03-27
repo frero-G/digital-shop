@@ -12,10 +12,11 @@ document.querySelector('.checkout-form').addEventListener('submit', (e) => {
         city: e.target.elements.city.value,
         streetAd: e.target.elements.streetAd.value,
         zipCode: e.target.elements.zipcode.value,
-        email: e.target.elements.email.value
+        email: e.target.elements.email.value,
+        totalPrice: total+1000
     })
     saveCheckout(checkoutInfo)
-    location.assign("checkout.html")
+    location.assign("index.html")
 })
 
 console.log(checkoutInfo)
