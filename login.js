@@ -16,7 +16,7 @@ document.querySelector('.form-field').addEventListener('submit', (e) => {
 })
 
 document.querySelector('#fg-password').addEventListener('click', (e) => {
-    location.assign('fg-password.js')
+    location.assign('fg-password.html')
 })
 
 console.log(datas)

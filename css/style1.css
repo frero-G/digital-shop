@@ -1114,7 +1114,7 @@ footer .help-center {
     height: 80vh;
 }
 
-.form-field, .login-field, .product-form {
+.form-field, .login-field, .product-form, .fullName, .password {
     border: 1px solid #000;
     width: 50rem;
     padding: 2.4rem;
@@ -1140,6 +1140,7 @@ form h1 {
 form input {
     padding: 0.6rem;
     font-size: 1.6rem;
+    border: 1px solid #333;
 }
 
 form #sub-btn {
