@@ -14,4 +14,9 @@ document.querySelector('.form-field').addEventListener('submit', (e) => {
     check.password = e.target.elements.password.value
     checkData(datas, check)
 })
+
+document.querySelector('#fg-password').addEventListener('click', (e) => {
+    location.assign('fg-password.js')
+})
+
 console.log(datas)
