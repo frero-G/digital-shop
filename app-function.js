@@ -46,6 +46,10 @@ const checkData = (datas, check) => {
     }
 }
 
+const forgetPassword = (accounts, fullName) => {
+    return accounts.find((data) => data.names.toLowerCase() === fullName.toLowerCase())
+}
+
 // saveProducts
 const saveProduct = function (product) {
     localStorage.setItem('products2', JSON.stringify(product))
