@@ -13,7 +13,8 @@ document.querySelector('.checkout-form').addEventListener('submit', (e) => {
         streetAd: e.target.elements.streetAd.value,
         zipCode: e.target.elements.zipcode.value,
         email: e.target.elements.email.value,
-        totalPrice: total+1000
+        totalPrice: total+1000,
+        items: carts
     })
     saveCheckout(checkoutInfo)
     location.assign("index.html")
