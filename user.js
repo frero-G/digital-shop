@@ -2,35 +2,45 @@
 
 const datas = getSavedDatas()
 // Setting user name
-const userId = location.hash.substring(1)
-
-const data = datas.find((user) => user.id === userId)
-
 try {
+    const data = datas.find((user) => user.id === loggedIn[0].id)
     if (data) {
-        data.login = true
         document.querySelector('#username').textContent = data.names
     } else {
         document.querySelector('#username').textContent = 'Unknown'
     }
+    console.log(loggedIn)
 } catch (e) {
     console.log('no data required.')
 }
 
 // Account info
+const loginButton = document.querySelector('#loginBtn')
+const container = document.querySelector('.account')
 const accImg = document.querySelector('#account-img')
 const accBox = document.querySelector('.account-info')
 
 try {
+    if (loggedIn == 0) {
+        container.style = 'display: none'
+        loginButton.style = 'display: block'
+    } else {
+        loginButton.style = 'display: none'
+        container.style = 'display: block'
+    }
+} catch (error) {
+    console.error()
+}
+
+try {
+
     accImg.addEventListener('mouseenter', (e) => {
         accBox.style = 'visibility: visible'
-    
         accImg.style = 'visibility: hidden'
     })
-    
-    accBox.addEventListener('mouseleave', (e) => {
+   
+    container.addEventListener('mouseleave', (e) => {
         accBox.style = 'visibility: hidden'
-    
         accImg.style = 'visibility: visible'
     })
 } catch (e) {

@@ -7,8 +7,7 @@ document.querySelector('.form-field').addEventListener('submit', (e) => {
     datas.push({
         id: uuidv4(),
         names: e.target.elements.names.value,
-        password: e.target.elements.password.value,
-        login: false
+        password: e.target.elements.password.value
     })
     saveDatas(datas)
     location.assign('login.html')

@@ -17,7 +17,7 @@ const saveDatas = (datas) => {
 
 // catch login username
 const getSavedLoggedIn = () => {
-    const loggedData = localStorage.getItem('log')
+    const loggedData = localStorage.getItem('log2')
     try {
         return loggedData ? JSON.parse(loggedData) : []
     } catch (error) {
@@ -26,7 +26,7 @@ const getSavedLoggedIn = () => {
 }
 
 const saveLoggedIn = (log) => {
-    localStorage.setItem('log', JSON.stringify(log))
+    localStorage.setItem('log2', JSON.stringify(log))
 }
 
 const loggedIn = getSavedLoggedIn()
