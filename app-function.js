@@ -348,6 +348,12 @@ const generateCartTableDOM = function (cart) {
         changeQuantity(cart.id, newQuantity)
     })
 
+    quantityInput.addEventListener('input', (e) => {
+        newQuantity = ''
+        newQuantity = e.target.value
+        changeQuantity(cart.id, newQuantity)
+    })
+
     try {
         document.querySelector('#updateBtn').addEventListener('click', (e) => {
             saveCart(carts)

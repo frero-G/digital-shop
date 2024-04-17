@@ -1,4 +1,8 @@
-const products = getSavedProducts()
+try {
+    const products = getSavedProducts()
+} catch (error) {
+    console.log(error)
+}
 
 // Save New Cart
 const carts = getSavedCarts()
@@ -48,6 +52,7 @@ if (!cartExist.length >= 1) {
         
         carts.push({
             id: id,
+            prodId: productIndex.id,
             prodName: productIndex.name,
             prodPrice: productIndex.price,
             quantity: quantityCalc,

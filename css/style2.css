@@ -298,6 +298,16 @@ nav a:hover, nav a:active{
     color: #fff;
 }
 
+/* empty div */
+.emppty-div {
+    height: 4vh;
+    text-align: center;
+    margin: 20% 0;
+    display: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 /* guiding */
 .guiding {
     background-color: #cacacab3;

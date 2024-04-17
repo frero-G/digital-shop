@@ -96,7 +96,6 @@ console.log(datas)
 const productId = location.hash.substring(1)
 try {
     const productToBe = product.find((prod) => prod.id === productId)
-    console.log(productToBe)
     const input1 = document.querySelector('#input1')
     const input2 = document.querySelector('#input2')
     const prodCategory = document.querySelector('.edit-item')
