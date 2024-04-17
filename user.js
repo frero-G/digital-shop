@@ -47,20 +47,8 @@ try {
     console.log('this error is for user-dashboard.html')
 }
 
-try {
-    document.querySelector('#add-product').addEventListener('click', (e) => {
-        location.assign(`new-product.html#${userId}`)
-    })
-} catch (e) {
-    console.log('this error is for the new product button.')
-}
-
 // Save New Product
 const product = getSavedProducts()
-const Id = location.hash.substring(1)
-
-const creator = datas.find((data) => data.id === Id)
-
 try {
     let category
     document.querySelector('#selected-item').addEventListener('change', (e) => {
@@ -74,24 +62,16 @@ try {
             name: e.target.elements.productName.value,
             price: e.target.elements.productPrice.value,
             category: category,
-            creater: creator.names
+            creatorId: loggedIn[0].id
         })
         saveProduct(product)
+        location.assign('user-dashboard.html')
     })
     
     console.log(product)
     
 } catch (e) {
     console.log('this error is for new-product.html')
-}
-
-// Back btn
-try {
-    document.querySelector('#backBtn').addEventListener('click', (e) => {
-        location.assign(`user-dashboard.html#${userId}`)
-    })
-} catch (e) {
-    
 }
 
 // Logout part
@@ -104,22 +84,9 @@ try {
 } catch (error) {
     console.log(`LOGOUT ERROR: ${error}`)
 }
-
+console.log(product)
 try {
     renderProducts(product)
-
-    const priceSpan = document.querySelector('#price')
-    const buttonCart = document.querySelector('#addCart')
-    
-    document.querySelector('.product-details').addEventListener('mouseenter', (e) => {
-        priceSpan.style = 'display: none'
-        buttonCart.style = 'display: block'
-    })
-
-    document.querySelector('.product-details').addEventListener('mouseleave', (e) => {
-        buttonCart.style = 'display: none'
-        priceSpan.style = 'display: block'
-    })
 } catch (error) {
     console.log('render products function error.')
 }

@@ -76,22 +76,6 @@ const forgetPassword = (accounts, fullName) => {
     return accounts.find((data) => data.names.toLowerCase() === fullName.toLowerCase())
 }
 
-// saveProducts
-const saveProduct = function (product) {
-    localStorage.setItem('products2', JSON.stringify(product))
-}
-
-// Get Saved Products
-const getSavedProducts = function () {
-    const productsJSON = localStorage.getItem('products2')
-
-    if (productsJSON !== null) {
-        return JSON.parse(productsJSON)
-    } else {
-        return []
-    }
-}
-
 // Render Products
 const renderProducts = (product) => {
     product.forEach(function (info) {
@@ -133,10 +117,13 @@ const generateProductDOM = function (datas) {
     productDetailsDiv.appendChild(btn)
 
     // setup creator name
-    if (!datas.creater) {
+    creatorN.classList.add('last-child')
+    if (!datas.creatorId) {
         creatorN.textContent = 'unknown'
     } else {
-        creatorN.textContent = datas.creater
+        const accounts = getSavedDatas()
+        const creator = accounts.find((user) => user.id === datas.creatorId)
+        creatorN.textContent = creator.names
     }
     productDetailsDiv.appendChild(creatorN)
 
@@ -156,6 +143,22 @@ const generateProductDOM = function (datas) {
     emptyDiv.appendChild(productDetailsDiv)
 
     return emptyDiv
+}
+
+// saveProducts
+const saveProduct = function (product) {
+    localStorage.setItem('products2', JSON.stringify(product))
+}
+
+// Get Saved Products
+const getSavedProducts = function () {
+    const productsJSON = localStorage.getItem('products2')
+
+    if (productsJSON !== null) {
+        return JSON.parse(productsJSON)
+    } else {
+        return []
+    }
 }
 
 // saveCarts
