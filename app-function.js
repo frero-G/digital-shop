@@ -15,6 +15,22 @@ const saveDatas = (datas) => {
     localStorage.setItem('datas2', JSON.stringify(datas))
 }
 
+// catch login username
+const getSavedLoggedIn = () => {
+    const loggedData = localStorage.getItem('log')
+    try {
+        return loggedData ? JSON.parse(loggedData) : []
+    } catch (error) {
+        return []
+    }
+}
+
+const saveLoggedIn = (log) => {
+    localStorage.setItem('log', JSON.stringify(log))
+}
+
+const loggedIn = getSavedLoggedIn()
+
 // Check Data
 const checkData = (datas, check) => {
     const nameValidation = document.querySelector('#names')
@@ -41,8 +57,18 @@ const checkData = (datas, check) => {
         passwordValidation.textContent = 'Incorrect password'
     } else {
         // passwordValidation.textContent = 'Your data is valid, you welcome'
-        datas[index].login = true
-        location.assign(`user-dashboard.html#${datas[index].id}`)
+        const Exist = loggedIn.find((log) => log.id === datas[index].id)
+        if (Exist) {
+            location.assign(`user-dashboard.html#${loggedIn[0].id}`)
+        } else if(!Exist && loggedIn.length === 0) {
+            loggedIn.push({
+                id: datas[index].id
+            })
+            saveLoggedIn(loggedIn)
+            location.assign(`user-dashboard.html#${loggedIn[0].id}`)
+        } else {
+            console.log("there is another account logged in")
+        }
     }
 }
 
