@@ -1121,11 +1121,18 @@ footer .help-center {
     height: 80vh;
 }
 
-.form-field, .login-field, .product-form, .fullName, .password {
+.form-field, .login-field, .product-form, .fullName, .password, .edit-form {
     border: 1px solid #000;
     width: 50rem;
     padding: 2.4rem;
     transform: translate(100%, 50%);
+}
+
+.edit-form a {
+    padding: .6rem;
+    font-size: 1.6rem;
+    text-align: center;
+    text-decoration: none;
 }
 
 form {
@@ -1164,6 +1171,12 @@ form p {
     font-size: 1.6rem;
     font-weight: 100;
     color: rgba(0, 0, 0, 0.774)
+}
+
+form select {
+    font-size: 1.6rem;
+    border: 1px solid #333;
+    padding: .6rem;
 }
 
 /* styling validations */

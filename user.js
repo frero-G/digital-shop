@@ -84,7 +84,6 @@ try {
 } catch (error) {
     console.log(`LOGOUT ERROR: ${error}`)
 }
-console.log(product)
 try {
     renderProducts(product)
 } catch (error) {
@@ -92,6 +91,37 @@ try {
 }
 
 console.log(datas)
+
+// edit product
+const productId = location.hash.substring(1)
+try {
+    const productToBe = product.find((prod) => prod.id === productId)
+    console.log(productToBe)
+    const input1 = document.querySelector('#input1')
+    const input2 = document.querySelector('#input2')
+    const prodCategory = document.querySelector('.edit-item')
+    
+    input1.value = productToBe.name
+    input2.value = productToBe.price
+    prodCategory.value = productToBe.category
+
+    input1.addEventListener('input', (e) => {
+        productToBe.name = e.target.value
+        saveProduct(product)
+    })
+
+    input2.addEventListener('input', (e) => {
+        productToBe.price = e.target.value
+        saveProduct(product)
+    })
+
+    prodCategory.addEventListener('click', (e) => {
+        productToBe.category = e.target.value
+        saveProduct(product)
+    })
+} catch (err) {
+    console.log(err)
+}
 
 // cart Box
 try {

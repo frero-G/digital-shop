@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new product ~ digital-shop</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <div class="content">
+        <div class="head-side">
+            <div class="head">
+                <h1>phlox</h1>
+                <nav>
+                    <a href="index.html" id="active-tab">home</a>
+                    <a href="shop.html">shop</a>
+                    <a href="about.html">about us</a>
+                    <a href="blog.html">blog</a>
+                    <a href="contact.html">contact us</a>
+                </nav>
+            </div>
+    
+            <div class="user">
+                <a href="login.html" id="loginBtn">login</a>
+                <div class="account">
+                    <img src="icons/contacts_512px.png" alt="Account" id="account-img">
+                    <div class="account-info">
+                        <span id="username"></span>
+                        <!-- <a href="new-product.html" style="font-size: 24px;" id="add-product">+</a> -->
+                        <a style="font-size: 24px; cursor: pointer;" id="add-product" href="new-product.html" title="New Product">+</a>
+                        <button id="logout-btn">Logout</button>
+                    </div>
+                </div>
+                <img src="icons/search_500px.png" alt="search" id="search">
+                <div class="cart">
+                    <a href="add-cart.html"><img src="icons/microsoft_store_512px.png" alt="cart"></a>
+                    <span id="count">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="guiding">
+        <div>
+            <a href="user-dashboard.html">Home</a> > <span>Edit Product</span>
+        </div>
+        <h1>Edit Product</h1>
+    </div>
+
+    <div class="form-side">
+        <form action="" class="edit-form">
+            <h1>Edit Product</h1>
+            <input type="text" name="productName" id="input1" placeholder="Enter Product Name" required>
+            <input type="number" name="productPrice" id="input2" placeholder="Enter Product Price" required>
+            <select name="item" id="selected-item" class="edit-item">
+                <option>choose Product Category</option>
+                <option value="laptop">Laptop</option>
+                <option value="speaker">Speaker</option>
+                <option value="Earphones">Earphones</option>
+                <option value="watch">Watch</option>
+                <option value="gaming console">Gaming console</option>
+                <option value="other">other</option>
+            </select>
+            <a href="shop.html" id="sub-btn">Submit</a>
+        </form>
+    </div>
+
+    <footer>
+        <div class="intro">
+            <h1>Phlox</h1>
+            <p>There are many variations passages of Lorem Ipsum available, but the majority have</p>
+            <div class="social-media">
+                <a href="#"><img src="icons/social-media/Instagram_512px.png" alt="instagram"></a>
+                <a href="#"><img src="icons/social-media/linkedin_2_512px.png" alt="LinkedIn"></a>
+                <a href="#"><img src="icons/social-media/facebook_f_500px.png" alt="Facebook"></a>
+                <a href="#"><img src="icons/social-media/Twitter_512px.png" alt="Twitter"></a>
+            </div> 
+        </div>
+        <div class="links">
+            <h2>quick links</h2>
+            <div class="main-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="address">
+            <h2>Contact</h2>
+            <div class="list-addresses">
+                <span>+99 (0) 101 0000 888 Patricia</span>
+                <span>C. Amedee 4401 Waldeck</span>
+                <span>Street Grapevine Nashville, Tx</span>
+                <span>76051</span>
+            </div>
+        </div>
+        <div class="help-center">
+            <h2>subscribe to our email</h2>
+            <h3>for latest news & updates</h3>
+            <div class="write-box">
+                <input type="text" name="" placeholder="Enter Your Email">
+                <input type="submit" value="Subscribe">
+            </div>
+        </div>
+    </footer>
+    <div class="original-footer">
+        <span>&copy; 2024 Phlox Digital Shop. All rights reserved</span>
+        <div>
+            <a href="#">Privacy Policy</a> . 
+            <a href="#">Term&Conditions</a>
+        </div>
+    </div>
+    
+    <script src="generate-id.js"></script>
+    <script src="app-function.js"></script>
+    <script src="user.js"></script>
+</body>
+</html>
