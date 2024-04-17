@@ -140,6 +140,52 @@ nav a:hover, nav a:active{
     color: #fff;
 }
 
+/* Account ifo */
+.account-info {
+    width: 12rem;
+    background-color: #eaeaead2;
+    position: absolute;
+    right: 15.5rem;
+    top: 3.2rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    border: 1px solid #000;
+    visibility: hidden;
+    transform: translate(0,0);
+}
+
+.account-info span {
+    margin-top: 0.6rem;
+}
+
+#username {
+    font-size: 1.2rem;
+}
+
+.account-info button {
+    padding: 0.4rem;
+    background-color: rgba(255, 0, 0, 0.748);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 0.2rem;
+}
+
+.account-info button:hover {
+    background: #000;
+    transition: .5s;
+}
+
+#add-product {
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin-left: 1.2rem;
+    color: #333;
+}
+
 /* Cart Box */
 .cart-box {
     width: 40rem;

@@ -151,6 +151,13 @@ nav a:hover, nav a:active{
     transition: .5s;
 }
 
+#add-product {
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin-left: 1.2rem;
+    color: #333;
+}
+
 /* Cart Box */
 .cart-box {
     width: 40rem;
