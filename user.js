@@ -64,6 +64,17 @@ try {
             category: category,
             creatorId: loggedIn[0].id
         })
+        setTimeout(() => {
+            const div2 = document.createElement('div')
+            const message = document.createElement('p')
+            div2.classList.add('messages')
+            message.textContent = 'Successfully product saved'
+            div2.appendChild(message)
+            document.querySelector('body').appendChild(div2)
+        }, 200);
+        setTimeout(() => {
+            div2.style = 'display: none'
+        }, 2000);
         saveProduct(product)
         location.assign('user-dashboard.html')
     })

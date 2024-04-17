@@ -166,7 +166,16 @@ const generateProductDOM = function (datas) {
         remove.addEventListener('click', () => {
             removeProd(datas.id)
             saveProduct(products)
-            renderProducts(products)
+            renderProducts(products, '')
+            const div2 = document.createElement('div')
+            const message = document.createElement('p')
+            div2.classList.add('messages')
+            message.textContent = 'Product Succesfully deleted'
+            div2.appendChild(message)
+            document.querySelector('body').appendChild(div2)
+            setTimeout(() => {
+                div2.style = 'display: none'
+            }, 1000);
         })
         div.appendChild(remove)
         if (datas.creatorId === loggedIn[0].id) {
@@ -226,6 +235,8 @@ const getSavedCarts = function () {
 
 // render Carts
 const renderCarts = (cart) => {
+    document.querySelector('.content1').innerHTML = ''
+    document.querySelector('.cartStore').innerHTML = ''
     cart.forEach(function (Info) {
         const cartEl = generateCartDOM(Info)
         const tableEl = generateCartTableDOM(Info)
@@ -328,7 +339,16 @@ const generateCartTableDOM = function (cart) {
     imgClose.addEventListener('click', function (e) {
         removeCart(cart.id)
         saveCart(carts)
-        location.assign('cart.html')
+        renderCarts(carts)
+        const div2 = document.createElement('div')
+        const message = document.createElement('p')
+        div2.classList.add('messages')
+        message.textContent = 'Cart Succesfully deleted'
+        div2.appendChild(message)
+        document.querySelector('body').appendChild(div2)
+        setTimeout(() => {
+            div2.style = 'display: none'
+        }, 1000);
     })
     td1.append(imgClose)
     tr.appendChild(td1)

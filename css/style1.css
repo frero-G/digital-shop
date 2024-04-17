@@ -1208,3 +1208,16 @@ form select {
 .controllers a:hover {
     text-decoration: underline;
 }
+
+.messages {
+    background-color: rgb(6, 176, 6);
+    width: 32rem;
+    position: absolute;
+    top: 92vh;
+    position: fixed;
+    margin-left: 3.2rem;
+    padding: 1.6rem;
+    color: #ffffffce;
+    text-align: center;
+    font-size: 1.6rem;
+}
