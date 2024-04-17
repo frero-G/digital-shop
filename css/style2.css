@@ -417,7 +417,7 @@ nav a:hover, nav a:active{
 }
 
 .options {
-    width: 12rem;
+    width: 20rem;
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
@@ -458,6 +458,12 @@ nav a:hover, nav a:active{
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 4.2rem;
     column-gap: 2.4rem;
+}
+
+.outputMessage {
+    text-align: center;
+    font-size: large;
+    grid-column: 1/3;
 }
 
 .element {

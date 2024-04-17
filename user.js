@@ -85,7 +85,8 @@ try {
     console.log(`LOGOUT ERROR: ${error}`)
 }
 try {
-    renderProducts(product)
+    const queryValue = location.hash.substring(1)
+    renderProducts(product, queryValue)
 } catch (error) {
     console.log('render products function error.')
 }
@@ -131,7 +132,7 @@ try {
         cartBox.style = 'display: block'
     })
 
-    cartBox.addEventListener('mouseleave', (e) => {
+    document.querySelector('.cart').addEventListener('mouseleave', (e) => {
         cartBox.style = 'display: none'
     })
 } catch (e) {

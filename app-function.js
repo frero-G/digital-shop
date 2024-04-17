@@ -77,13 +77,21 @@ const forgetPassword = (accounts, fullName) => {
 }
 
 // Render Products
-const renderProducts = (product) => {
+const renderProducts = (product, query) => {
     const container = document.querySelector('.con')
     container.innerHTML = ''
-    product.forEach(function (info) {
-        const productEl = generateProductDOM(info)
-        container.appendChild(productEl)
-    })
+    const filteredProduct = product.filter((prod) => prod.category.includes(query))
+    if (filteredProduct.length >= 1) {
+        filteredProduct.forEach(function (info) {
+            const productEl = generateProductDOM(info)
+            container.appendChild(productEl)
+        })
+    } else {
+        const output = document.createElement('p')
+        output.textContent = "There's no product of that category"
+        output.classList.add('outputMessage')
+        container.appendChild(output)
+    }
     console.log(product)
 }
 
