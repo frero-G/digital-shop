@@ -97,18 +97,12 @@ try {
 // Logout part
 try {
     document.querySelector('#logout-btn').addEventListener('click', (e) => {
-        if (data >= 0) {
-            data.login = false
-        } else {
-            location.assign('login.html')
-        }
-    
-        if (data.login === false) {
-            location.assign('login.html')
-        }
+        loggedIn.splice(0, 1)
+        saveLoggedIn(loggedIn)
+        location.assign('login.html')
     })
 } catch (error) {
-    console.log('logout error.')
+    console.log(`LOGOUT ERROR: ${error}`)
 }
 
 try {
