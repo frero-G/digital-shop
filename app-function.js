@@ -78,9 +78,11 @@ const forgetPassword = (accounts, fullName) => {
 
 // Render Products
 const renderProducts = (product) => {
+    const container = document.querySelector('.con')
+    container.innerHTML = ''
     product.forEach(function (info) {
         const productEl = generateProductDOM(info)
-        document.querySelector('.con').appendChild(productEl)
+        container.appendChild(productEl)
     })
     console.log(product)
 }
@@ -94,6 +96,9 @@ const generateProductDOM = function (datas) {
     const price = document.createElement('span')
     const btn = document.createElement('a')
     const creatorN = document.createElement('span')
+    const remove = document.createElement('a')
+    const edit = document.createElement('a')
+    const div = document.createElement('div')
 
     img.setAttribute('src', 'img/group-33.jpg')
     img.setAttribute('alt', 'product picture')
@@ -142,6 +147,27 @@ const generateProductDOM = function (datas) {
 
     emptyDiv.appendChild(productDetailsDiv)
 
+    try {
+        // controlers
+        div.classList.add('controllers')
+        
+        edit.textContent = 'Edit'
+        edit.setAttribute('href', `edit-product.html#${datas.id}`)
+        div.appendChild(edit)
+        remove.textContent = 'Delete'
+        remove.addEventListener('click', () => {
+            removeProd(datas.id)
+            saveProduct(products)
+            renderProducts(products)
+        })
+        div.appendChild(remove)
+        if (datas.creatorId === loggedIn[0].id) {
+            emptyDiv.appendChild(div)
+        }
+    } catch (error) {
+        console.error
+    }
+
     return emptyDiv
 }
 
@@ -158,6 +184,19 @@ const getSavedProducts = function () {
         return JSON.parse(productsJSON)
     } else {
         return []
+    }
+}
+
+// remove prod
+const products = getSavedProducts()
+const removeProd = (prodId) => {
+    const prodIndex = products.findIndex(function (prod) {
+        return prod.id === prodId
+    })
+
+    if (prodIndex > -1) {
+        products.splice(prodIndex, 1)
+        
     }
 }
 

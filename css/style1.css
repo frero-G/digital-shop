@@ -826,9 +826,9 @@ nav a:hover, nav a:active{
     transition: .9s;
 }
 
-.product-details:last-child {
+.last-child {
     font-size: 1.4rem;
-    gap: 1.2rem;
+    margin-left: 1.2rem;
 }
 
 /* Box6 */
@@ -1173,14 +1173,25 @@ form p {
     margin-left: 4px;
 }
 
-/* Back Button */
-#backBtn:link, #backBtn:visited {
-    font-size: 1.6rem;
-    color: red;
-    text-align: center;
+.controllers {
+    display: flex;
+    gap: 1.2rem;
 }
 
-#backBtn:hover, #backBtn:active {
+.controllers a {
+    padding: .4rem;
     color: #000;
+    cursor: pointer;
+    font-size: 1.6rem;
+    border: 1px solid #333;
     text-decoration: none;
+}
+
+.controllers a:last-child {
+    background-color: red;
+    color: #fff;
+}
+
+.controllers a:hover {
+    text-decoration: underline;
 }

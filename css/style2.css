@@ -504,9 +504,9 @@ nav a:hover, nav a:active{
     transition: .9s;
 }
 
-.product-details:last-child {
+.last-child {
     font-size: 1.4rem;
-    gap: 1.2rem;
+    margin-left: 1.2rem;
 }
 
 /* aboutUs page */
@@ -1077,4 +1077,28 @@ table input {
 /* shop nav bar */
 #arrow1, #arrow2 {
     cursor: pointer;
+}
+
+.controllers {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.controllers a {
+    padding: .4rem;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.6rem;
+    border: 1px solid #333;
+    text-decoration: none;
+}
+
+.controllers a:last-child {
+    background-color: red;
+    color: #fff;
+}
+
+.controllers a:hover {
+    text-decoration: underline;
 }
