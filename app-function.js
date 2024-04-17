@@ -236,7 +236,11 @@ const getSavedCarts = function () {
 // render Carts
 const renderCarts = (cart) => {
     document.querySelector('.content1').innerHTML = ''
-    document.querySelector('.cartStore').innerHTML = ''
+    try {
+        document.querySelector('.cartStore').innerHTML = ''
+    } catch (error) {
+        console.log(error)
+    }
     cart.forEach(function (Info) {
         const cartEl = generateCartDOM(Info)
         const tableEl = generateCartTableDOM(Info)
@@ -339,7 +343,7 @@ const generateCartTableDOM = function (cart) {
     imgClose.addEventListener('click', function (e) {
         removeCart(cart.id)
         saveCart(carts)
-        renderCarts(carts)
+        location.assign('cart.html')
         const div2 = document.createElement('div')
         const message = document.createElement('p')
         div2.classList.add('messages')

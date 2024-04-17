@@ -57,6 +57,7 @@ try {
     })
     document.querySelector('.product-form').addEventListener('submit', (e) => {
         const id = uuidv4()
+        e.preventDefault()
         product.push({
             id: id,
             name: e.target.elements.productName.value,
@@ -64,17 +65,6 @@ try {
             category: category,
             creatorId: loggedIn[0].id
         })
-        setTimeout(() => {
-            const div2 = document.createElement('div')
-            const message = document.createElement('p')
-            div2.classList.add('messages')
-            message.textContent = 'Successfully product saved'
-            div2.appendChild(message)
-            document.querySelector('body').appendChild(div2)
-        }, 200);
-        setTimeout(() => {
-            div2.style = 'display: none'
-        }, 2000);
         saveProduct(product)
         location.assign('user-dashboard.html')
     })
@@ -83,6 +73,13 @@ try {
     
 } catch (e) {
     console.log('this error is for new-product.html')
+}
+
+try {
+    const queryValue = location.hash.substring(1)
+    renderProducts(product, queryValue)
+} catch (error) {
+    console.log(error)
 }
 
 // Logout part
@@ -94,12 +91,6 @@ try {
     })
 } catch (error) {
     console.log(`LOGOUT ERROR: ${error}`)
-}
-try {
-    const queryValue = location.hash.substring(1)
-    renderProducts(product, queryValue)
-} catch (error) {
-    console.log('render products function error.')
 }
 
 console.log(datas)
